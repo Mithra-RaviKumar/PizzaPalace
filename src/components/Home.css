@@ -1,0 +1,134 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Neue', cursive;
+  background-color: #000;
+}
+
+.landing-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: #1d1d1d;
+  height: 70px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-section img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.logo-section img:hover {
+  transform: rotate(-12deg) scale(1.1);
+}
+
+.logo-text {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.2rem;
+  color:orangered;
+  line-height: 1;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav-menu a {
+  color: #fff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.nav-menu a:hover {
+  color: orangered;
+  transform: scale(1.05);
+}
+
+.nav-menu .login-btn {
+  background-color:orangered;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.8rem;
+  transition: 0.3s ease;
+}
+
+.nav-menu .login-btn:hover {
+  background-color: orangered;
+  transform: scale(1.05);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  color:red;
+   transform: translateY(-50px);
+}
+
+.main-content h1 {
+  font-family:cursive;
+  font-size: 4rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px #000;
+}
+
+.main-content p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: 'Comic Neue', cursive;
+  color: #f0f0f0;
+}
+.scooter-wrapper {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scooter {
+  height:150px;
+  width: 200px;
+  animation: moveScooter 3s linear infinite;
+}
+
+@keyframes moveScooter {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(110vw);
+  }
+}
