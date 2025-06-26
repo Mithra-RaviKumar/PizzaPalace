@@ -6,7 +6,7 @@
   color: #fff;
 }
 
-/* Header reused */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -76,12 +76,12 @@
   transform: scale(1.05);
 }
 
-/* Main Layout */
+
 .menu-container {
   display: flex;
 }
 
-/* Sidebar */
+
 .menu-sidebar {
   width: 220px;
   background-color: #111;
@@ -108,7 +108,7 @@
   border-radius: 8px;
 }
 
-/* Items Grid */
+
 .menu-items {
   flex: 1;
   padding: 40px;
@@ -171,4 +171,14 @@
 
 .cart-btn:hover {
   background-color: darkorange;
+}
+.cart-icon {
+  font-size: 1.8rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+  color: orangered;
+  transform: scale(1.2);
 }

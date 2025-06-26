@@ -1,7 +1,12 @@
+
 import React, { useState } from 'react';
 import './Menu.css';
 import pizzaLogo from '../assets/logo-pizza.png';
 import { FaShoppingCart } from 'react-icons/fa';
+import { useCart } from './CartContext';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 // Pizza Images
 import pizza1 from '../assets/pizza/pizza1.jpg';
@@ -208,6 +213,8 @@ const pastaItems = [
 ];
 
 export default function Menu() {
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('Pizza');
 
   const getItems = () => {
@@ -220,23 +227,26 @@ export default function Menu() {
 };
 
   return (
-    <div className="menu-page">
-      {/* Header */}
-      <header className="header">
-        <div className="logo-section">
-          <img src={pizzaLogo} alt="Pizza Logo" />
-          <div className="logo-text">
-            Pizza<br />Palace
-          </div>
-        </div>
-        <nav className="nav-menu">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-          <a href="/menu">Menu</a>
-          <button className="login-btn">Login</button>
-        </nav>
-      </header>
+    <div className="menu-page container-fluid p-0">
+      
+      <header className="header d-flex justify-content-between align-items-center">
+                      <div className="logo-section d-flex align-items-center gap-3">
+                        <img src={pizzaLogo} alt="Pizza Logo" />
+                        <div className="logo-text">
+                          Pizza<br />Palace
+                        </div>
+                      </div>
+                      <nav className="nav-menu d-flex align-items-center gap-4">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
+                        <a href="/menu">Menu</a>
+                       <Link to="/lo" className="login-btn">Login</Link>
+                        <a href="/cart" className="cart-icon"><FaShoppingCart /></a>
+
+
+                      </nav>
+                    </header>
 
       <div className="menu-container">
         <div className="menu-sidebar">
@@ -259,7 +269,8 @@ export default function Menu() {
                 <img src={item.image} alt={item.name} />
                 <h3>{item.name}</h3>
                 <p>₹ {item.price}</p>
-                <button className="cart-btn"><FaShoppingCart /></button>
+                
+                <button className="cart-btn" onClick={()=>addToCart(item)}><FaShoppingCart /></button>
               </div>
             ))}
             {getItems().length === 0 && <p style={{ color: '#fff' }}>Coming Soon!</p>}

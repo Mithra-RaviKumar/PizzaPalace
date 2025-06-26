@@ -1,0 +1,74 @@
+.customer-login-container {
+  width: 100vw;
+  height: 100vh;
+  background:white;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-login-box {
+  background-color: rgb(60, 53, 53);
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.customer-login-box h2 {
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.customer-login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.customer-login-box .login-btn,
+.customer-login-box .signup-btn,
+.customer-login-box .back-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn {
+  background-color: orangered;
+  color: white;
+}
+
+.signup-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.back-btn {
+  background-color: #555;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: darkorange;
+}
+
+.signup-btn:hover {
+  background-color: #0056b3;
+}
+
+.back-btn:hover {
+  background-color: #333;
+}

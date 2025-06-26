@@ -1,0 +1,134 @@
+
+.cart-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background: #1e1e1e;
+  color: white;
+  box-sizing: border-box;
+  padding: 40px 20px;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+
+.cart-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+.cart-heading {
+  color: orangered;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+
+.empty-cart {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2a2a2a;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+
+.cart-item-image {
+  height: 100px;
+  width: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+.cart-item-details {
+  flex: 1;
+  min-width: 180px;
+}
+
+
+.cart-item-details h3,
+.cart-item-details p {
+  margin: 5px 0;
+}
+
+
+.remove-btn {
+  background: orangered;
+  color: black;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.total-price {
+  text-align: right;
+  font-size: 1.6rem;
+  color: yellow;
+  margin-top: 30px;
+  width: 100%;
+}
+
+
+.order-btn {
+  background-color: orangered;
+  color: black;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  float: right;
+  transition: transform 0.3s;
+}
+
+.order-btn:hover {
+  transform: scale(1.05);
+}
+.back-to-menu-btn {
+  display: inline-block;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid orangered;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.back-to-menu-btn:hover {
+  background-color: orangered;
+  color: black;
+}
